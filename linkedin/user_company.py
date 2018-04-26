@@ -22,8 +22,8 @@ from selenium.common.exceptions import WebDriverException
 from constant_fixed import constants
 
 # identifiants
-email_address = "sasha.bouloudnine@gmail.com"
-password = "'5f7d19a2"
+email_address = "email_address"
+password = "password"
 sleep_time = 2
 
 # configurer webdriver
