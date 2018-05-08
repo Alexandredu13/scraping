@@ -14,7 +14,7 @@ API Fnac (10/05)
 Trendspot.be (1200, 18/05)
 Linkedin Essec (22/05)
 
-Cenior.fr (coach) (10/05)
+Cenior.fr (coach) (10/05) - en cours
 Sample Manageo (10/05)
 
 Immoweb (ok)

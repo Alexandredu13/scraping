@@ -15,11 +15,11 @@ class SpiderCenior():
         time = []
         a = datetime.datetime.now()
         time.append(a)
-        with open('urls_cenior.csv', 'w') as f:
+        with open('urls_cenior_2.csv', 'w') as f:
             writer = csv.DictWriter(f, fieldnames=self.fieldnames)
             writer.writeheader()
 
-            for i in range(0, 3091):
+            for i in range(1992, 3091):
                 response = self.r.get('http://www.cenior.fr/repertoire/%s/le-repertoire-des-entrepreneurs.htm' % i)
                 print response.status_code
                 response = response.text
