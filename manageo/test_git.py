@@ -7,4 +7,15 @@ for i in range(0,1000):
         print 'ee'
 
 
+'''
+LBC update (07/05)
+Oikos (10/05)
+API Fnac (10/05)
+Trendspot.be (1200, 18/05)
+Linkedin Essec (22/05)
 
+Cenior.fr (coach) (10/05)
+Sample Manageo (10/05)
+
+Immoweb (ok)
+'''

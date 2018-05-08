@@ -12,6 +12,7 @@ import csv
 # counter
 count = 0
 
+
 class spider:
 
     def __init__(self):

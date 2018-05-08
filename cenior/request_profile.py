@@ -1,13 +1,5 @@
 import requests
-import urllib
 from bs4 import BeautifulSoup
-import os
-import re
-from scrapy import Selector
-from scrapy.selector import HtmlXPathSelector
-import re
-import codecs
-import csv
 import sys
 import time
 import threading
@@ -17,6 +9,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 exitFlag = 0
+
 
 class spider(threading.Thread):
 
@@ -66,6 +59,7 @@ class spider(threading.Thread):
         with open(self.path + name + '.txt', 'w') as my_file:
             my_file.write(html_response)
         print '-- SUCCESS : %s' % name
+
 
 threadList = ["Thread-1", "Thread-2", "Thread-3", "Thread-4", "Thread-5"]
 db = pd.read_csv("/Users/sashabouloudnine/PycharmProjects/scraping/sandbox/cenior/urls.csv", delimiter="$")
