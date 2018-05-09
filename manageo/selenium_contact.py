@@ -8,28 +8,26 @@ import datetime
 
 # selenium package
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import TimeoutException
-from selenium.common.exceptions import UnexpectedAlertPresentException
-from selenium.common.exceptions import WebDriverException
+
 
 class ContactManageo():
 
     def __init__(self):
         self.fieldnames = ['Nom', 'URL', 'Siren', 'Code postal', 'Ville']
         self.client = 'gklein'
-        self.date = str(datetime.date.today())
+        self.date = str(datetime.date.today()).replace('-','')
         self.site = 'manageo'
         self.url = 'https://www.manageo.fr/'
         self.cible = 'https://www.manageo.fr/annuaire/95-val-d-oise-syndic-de-copropriete-_dem95-582-1.html'
         self.user_email = 'g.klein.manageo@maildrop.cc'
         self.user_password = 'gklein75'
+        self.receipt_email = 'g.klein@lr-services.com'
         self.options = Options()
         self.options.add_argument("--kiosk")
         self.capa = DesiredCapabilities.CHROME
@@ -37,6 +35,17 @@ class ContactManageo():
         self.driver = webdriver.Chrome('/Users/sashabouloudnine/Desktop/chromedriver',
                                        desired_capabilities=self.capa, options=self.options)
         self.wait = WebDriverWait(self.driver, 20)
+        self.message = u"Bonjour Madame, Monsieur \n\nJe suis Mr KLEIN responsable commercial de la soci\u00e9t\u00e9 " \
+                       u"LR SERVICES. Notre entreprise est sp\u00e9cialis\u00e9e dans le secteur de l'entretien des" \
+                       u" b\u00e2timents, des parties communes et des entr\u00e9es et sorties de containers, depuis " \
+                       u"quelques ann\u00e9es. \n Nous avons acquis l'exp\u00e9rience n\u00e9cessaire dans ce domaine " \
+                       u"pour vous apporter des r\u00e9ponses claires, pr\u00e9cises et techniques.\n\nNous " \
+                       u"restons donc a votre disposition pour un \u00e9ventuelle rendez-vous physique ou " \
+                       u"t\u00e9l\u00e9phonique afin d'analyser vos besoins et vos attentes, et vous transmettre dans " \
+                       u"les 24h un devis correspondant.\n\nNous souhaitons vivement que la qualit\u00e9 de nos " \
+                       u"services retienne votre attention.\n\nVeuillez agr\u00e9er, Madame, Monsieur, " \
+                       u"l'expression de nos salutations distingu\u00e9es."
+        self.count = 0
 
     def scroll_to_element(self, element):
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
@@ -96,8 +105,8 @@ class ContactManageo():
                     url = ''
 
                 try:
-                    siren = url.replace('/entreprises/','').replace('.html','')
-                except Exception:
+                    siren = url.replace('/entreprises/', '').replace('.html', '')
+                except NoSuchElementException, Exception.IndexError:
                     siren = ''
 
                 try:
@@ -118,6 +127,51 @@ class ContactManageo():
                 writer.writerow({'Nom': nom, 'URL': url, 'Siren': siren, 'Code postal': cp, 'Ville': ville})
                 time.sleep(1)
                 print '-- SUCCESS : %s' % nom
+
+        self.driver.close()
+
+    def contact(self):
+        ContactManageo.connect(self)
+        time.sleep(2)
+        self.wait.until(EC.presence_of_element_located(
+            (By.CSS_SELECTOR, "div.col-sm-6.col-md-4")
+        ))
+        items = self.driver.find_elements_by_xpath("//div[@class='col-sm-6 col-md-4']")
+        for i in items:
+            message = i.find_element_by_css_selector(
+                "i.man-contact-entreprise.mi-lettre.man-analytics-clic.man-analytics-autopromo")
+            message.click()
+            objet = self.wait.until(EC.element_to_be_clickable(
+                (By.CSS_SELECTOR, 'div#objetDemande')
+            ))
+            objet.click()
+            rdv = self.wait.until(EC.element_to_be_clickable(
+                (By.XPATH, "//div[@class='select-wrapper']/ul/li/span[text()='Demande de rendez-vous']")
+            ))
+            rdv.click()
+            email = self.wait.until(EC.element_to_be_clickable(
+                (By.CSS_SELECTOR, 'input#email')
+            ))
+            email.click()
+            email.clear()
+            email.send_keys(self.receipt_email)
+            text = self.wait.until(EC.element_to_be_clickable(
+                (By.CSS_SELECTOR, 'textarea#message')
+            ))
+            text.click()
+            self.driver.execute_script("document.getElementById('message').value = arguments[0]", self.message)
+            button_valider = self.wait.until(EC.element_to_be_clickable(
+                (By.XPATH, "//button[text()='VALIDER']")
+            ))
+            button_valider.click()
+            close = self.wait.until(EC.element_to_be_clickable(
+                (By.XPATH,
+                 "//button/span[text()='Fermer']")
+            ))
+            close.click()
+            self.count += 1
+            print self.count
+            time.sleep(1)
 
         self.driver.close()
 
