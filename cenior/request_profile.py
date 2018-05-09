@@ -14,12 +14,11 @@ exitFlag = 0
 class spider(threading.Thread):
 
     def __init__(self, id, name, q):
-        self.last_url = 'entrepreneur-yernaux-electricie-bricolage-plomberie-corquoy-757.htm.txt'
         threading.Thread.__init__(self)
         self.id = id
         self.name = name
         self.q = q
-        self.path = "/Users/sashabouloudnine/PycharmProjects/scraping/sandbox/cenior/profiles/"
+        self.path = "/Users/sashabouloudnine/PycharmProjects/lobstr/scraping/cenior/profiles/"
         self.r = requests.Session()
         self.headers = {
             'Accept': '*/*',
@@ -32,6 +31,7 @@ class spider(threading.Thread):
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)\
              Chrome/65.0.3325.181 Safari/537.36'
         }
+        self.count = 1
 
     def run(self):
         print "Starting " + self.name
@@ -58,11 +58,12 @@ class spider(threading.Thread):
         name = url.replace('http://www.cenior.fr/', '').replace('/', '-')
         with open(self.path + name + '.txt', 'w') as my_file:
             my_file.write(html_response)
-        print '-- SUCCESS : %s' % name
+        self.count += 1
+        print '-- SUCCESS : %s %s' % (name, self.count)
 
 
 threadList = ["Thread-1", "Thread-2", "Thread-3", "Thread-4", "Thread-5"]
-db = pd.read_csv("/Users/sashabouloudnine/PycharmProjects/scraping/sandbox/cenior/urls.csv", delimiter="$")
+db = pd.read_csv("/Users/sashabouloudnine/PycharmProjects/lobstr/scraping/cenior/urls_cenior_final.csv")
 queueLock = threading.Lock()
 workQueue = Queue.Queue()
 threads = []
