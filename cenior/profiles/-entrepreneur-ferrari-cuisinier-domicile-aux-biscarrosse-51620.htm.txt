@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   CUISINIER à DOMICILE aux PARTICULIERS et ENTREPRISES à Biscarrosse - Auto-entrepreneur 40 - la POELE des GOURMETS du SUD OUEST - Didier FERRARI
+  </title>
+  <meta content="A Biscarrosse : Service de CUISINIER à DOMICILE aux PARTICULIERS et ENTREPRISES : Retrouvez toutes les coordonnées de Didier FERRARI sur cette page. Didier FERRARI est un membre du réseau des auto-entrepreneurs Cenior." name="description"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="news" name="medium"/>
+  <meta content="Cenior, entrepreneur, autoentrepreneur, annuaire, adresses, departement, region, informatique, bricolage, annonces, charte, inscription, gratuite" name="keywords"/>
+  <meta content="FR" http-equiv="content-language"/>
+  <meta content="index,follow" name="robots"/>
+  <meta content="www.cenior.fr" name="copyright"/>
+  <meta content="jtiM_jaftmJiBifEMdFxj1yWLCTIxPUkVM4hqPtKK30" name="google-site-verification"/>
+  <meta content="Cenior - Réseau des auto-entrepreneurs" property="og:title"/>
+  <meta content="company" property="og:type"/>
+  <meta content="http://www.cenior.fr/" property="og:url"/>
+  <meta content="http://www.cenior.fr/images/cenior_facebook.png" property="og:image"/>
+  <meta content="Cenior - Réseau des auto-entrepreneurs" property="og:site_name"/>
+  <meta content="lpenaud" property="fb:admins"/>
+  <meta content="Auto-entrepreneurs... des professionels qui vous proposent leur savoir faire, leur expérience, et leurs compétences pour satisfaire au mieux particuliers et entreprises." property="og:description"/>
+  <link href="/favicon.png" rel="icon" type="image/png"/>
+  <script src="/js/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="/js/main.js" type="text/javascript">
+  </script>
+  <script src="/js/jquery-plugins/mailcrypt.js" type="text/javascript">
+  </script>
+  <script src="/spt/lib/nivo/jquery.nivo.slider.pack.js" type="text/javascript">
+  </script>
+  <link href="/spt/lib/nivo/nivo-slider.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/main.css" rel="stylesheet" type="text/css"/>
+  <script src="/js/lightbox.js" type="text/javascript">
+  </script>
+  <link href="/css/lightbox.css" rel="stylesheet" type="text/css"/>
+  <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+  </script>
+  <script>
+   (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5391779442372553",
+    enable_page_level_ads: true
+  });
+  </script>
+ </head>
+ <body>
+  <div id="head-line">
+   Annuaire des auto-entrepreneurs : Cenior
+  </div>
+  <div id="header">
+   <div class="wrapper">
+    <a href="/" id="logo">
+     CENIOR
+    </a>
+    <div class="menu">
+     <a href="/">
+      accueil
+     </a>
+     <div class="separator">
+     </div>
+     <a href="/qui-sommes-nous.htm">
+      qui sommes nous
+     </a>
+     <div class="separator">
+     </div>
+     <a href="/contact.htm">
+      contact
+     </a>
+     <div class="separator">
+     </div>
+     <a href="http://www.lasty.fr/annonces/" target="_blank">
+      annonces
+     </a>
+     <div class="separator">
+     </div>
+     <div class="separator">
+     </div>
+     <a href="http://www.lasty.fr/" target="_blank">
+      réseau
+     </a>
+     <div class="separator">
+     </div>
+     <a href="/inscription-auto-entrepreneur.htm">
+      inscription gratuite
+     </a>
+     <div class="separator">
+     </div>
+     <a href="/connexion/">
+      connexion
+     </a>
+     <a href="http://www.vlasta.fr/" target="_blank">
+      <div class="new-sticker">
+      </div>
+     </a>
+    </div>
+   </div>
+  </div>
+  <div id="partners">
+   <div class="wrapper">
+    <a href="http://www.cci.fr/" target="_blank">
+     <img alt="Chambre de commerce et d'industrie" src="/img/home/partners/partner_cci.png" title="Chambre de commerce et d'industrie"/>
+    </a>
+    <a href="http://www.union-auto-entrepreneurs.com" target="_blank">
+     <img alt="UAE" src="/img/home/partners/partner_uae.png" title="Union des Auto-Entrepreneurs"/>
+    </a>
+    <a href="http://www.lautoentrepreneur.fr/" target="_blank">
+     <img alt="L'Auto-entrepreneur" src="/img/home/partners/partner_lautoentrepreneur.png" title="L'auto entrepreneur"/>
+    </a>
+    <a href="http://www.economie.gouv.fr/" target="_blank">
+     <img alt="Economie.gouv.fr" src="/img/home/partners/partner_economie.png" title="Economie.gouv.fr"/>
+    </a>
+    <a href="http://www.pole-emploi.fr/" target="_blank">
+     <img alt="Pole emploi" src="/img/home/partners/partner_pole_emploi.png" title="Pole emploi"/>
+    </a>
+    <a href="http://www.insee.fr/" target="_blank">
+     <img alt="INSEE" src="/img/home/partners/partner_insee.png" title="INSEE"/>
+    </a>
+    <a href="http://www.inpi.fr/" target="_blank">
+     <img alt="INPI" src="/img/home/partners/partner_inpi.png" title="INPI"/>
+    </a>
+    <a href="http://www.cnil.fr/" target="_blank">
+     <img alt="CNIL" src="/img/home/partners/partner_cnil.png" title="CNIL"/>
+    </a>
+    <a href="http://fr.wikipedia.org/" target="_blank">
+     <img alt="Wikipedia" src="/img/home/partners/partner_wikipedia.png" title="Wikipedia"/>
+    </a>
+   </div>
+  </div>
+  <div id="content">
+   <div class="wrapper">
+    <h1>
+     Auto-Entrepreneurs de France - Rechercher et trouver des clients
+    </h1>
+    <div style="background-color:#4CA5E2;height:94px;width:100%;margin:0px 0px 15px 0px;position:relative;">
+     <div style="top:2px;height:90px;position:absolute;left:112px;">
+      <a href="http://1and1.fr/xml/order?k_id=84957691" target="_blank">
+       <img border="0" height="90" src="http://adimg.uimserv.net/1und1/Werbemittel_FR/wh_an_728x90.gif" width="728"/>
+      </a>
+     </div>
+    </div>
+    <div class="fiche-entrepreneur">
+     <div class="logo-bg">
+      <img src="/img/logo/categorie/256/cuisine-a-domicile.jpg"/>
+     </div>
+     <div class="infos">
+      <span class="nom">
+       Didier FERRARI - 40 - la POELE des GOURMETS du SUD OUEST
+      </span>
+      <span class="adresse">
+       58 impasse des Camélias
+       <br/>
+       40600 Biscarrosse
+      </span>
+      <span class="telephone">
+       <a href="tel:05 58 78 84 08">
+        05 58 78 84 08
+       </a>
+       /
+       <a href="tel:06 84 28 49 78">
+        06 84 28 49 78
+       </a>
+      </span>
+      <span class="email">
+       <a class="data">
+        ferrarid368
+        <span>
+         5af2a312e4b7f
+        </span>
+        hotmail.com
+       </a>
+      </span>
+      <span class="url">
+       <a href="http://www.lapoeledesgourmets.com">
+        http://www.lapoeledesgourmets.com
+       </a>
+      </span>
+     </div>
+     <div class="clear-flow">
+     </div>
+     <div class="map">
+      <img src="http://maps.google.com/maps/api/staticmap?center=Biscarrosse,40600,France&amp;zoom=12&amp;size=660x220&amp;maptype=roadmap&amp;markers=color:blue|+58+impasse+des+Cam%C3%A9lias+,Biscarrosse,40600,France&amp;sensor=false"/>
+     </div>
+     <h2 class="intitule">
+      CUISINIER à DOMICILE aux PARTICULIERS et ENTREPRISES
+     </h2>
+     <p class="description">
+      L'équipe de la Poêle des Gourmets
+      <br/>
+      intervient chez vous
+      <br/>
+      ou sur le lieu de votre choix,
+      <br/>
+      et prépare les délices
+      <br/>
+      dans des poêles géantes Axoa ,
+      <br/>
+      Paella ,Tartiflette ,Choucroute,
+      <br/>
+      cuisse de canard , moules frites ,
+      <br/>
+      couscous etc...
+      <br/>
+      devant les yeux de vos invités.
+      <br/>
+      <br/>
+      Ainsi, la bonne humeur et l'animation
+      <br/>
+      des convives est assurée.
+      <br/>
+      <br/>
+      Tous les repas proposés peuvent bien sûr être personnalisés en fonction de vos envies et de vos besoins. fontaine d'apéritif "à volonté" servi en buffet Tapas , chiffonnades , toasts beignets de calamar , accra ,samoussas "Tout fait maison".
+      <br/>
+      <br/>
+      Le chef propose également une grande variété d'entrées, de fromages et de desserts.
+      <br/>
+      Des fontaines de chocolat ainsi que des fontaines de sangria sont aussi disponibles, et peuvent être installées sur place.
+      <br/>
+      Type de cuisine
+      <br/>
+      Élaborés à base de produits frais de qualité, les délices concoctés par le chef de la Poêle des Gourmets présentent une variété étonnante: couscous, choucroutes, paellas, moules frites, axoas basques, etc.
+      <br/>
+      C'est donc notamment la cuisine traditionnelle qui est au rendez-vous et qui sublime les palais grâce à des saveurs exceptionnelles.
+      <br/>
+      Autres services
+      <br/>
+      À l'occasion de votre mariage, la Poêle des Gourmets collabore avec des experts de l'organisation et de l'animation aussi pour les enfants ( Bisounours , Jeannot Lapin).
+      <br/>
+      Le traiteur vous préconise les services exceptionnels de ces partenaires, et peut aussi vous conseiller sur le choix d'une salle de réception dans la région.
+      <br/>
+      Mariages, baptêmes, communion, anniversaire, soirée à thèmes, comité d'entreprise, repas d'association .
+      <br/>
+      Les événements lors desquels La Poêle des Gourmets peut intervenir sont nombreux.
+      <br/>
+      En tout cas, le traiteur vous assure une célébration inoubliable.
+     </p>
+     <div class="clear-flow">
+     </div>
+     <div class="modifier-fiche-zone">
+      <p onclick="showModifierFicheForm()" style="cursor:pointer;">
+       C'est votre fiche? Modifiez-la
+      </p>
+      <div id="modifier-fiche-form" style="display:none">
+       <input id="modifier-fiche-id" type="hidden" value="51620"/>
+       <label>
+        Adresse e-mail :
+        <input id="modifier-fiche-email" type="text"/>
+       </label>
+       <input onclick="submitModifierFicheForm()" type="button" value="OK"/>
+      </div>
+      <div id="modifier-fiche-res-zone" style="display:none">
+      </div>
+     </div>
+     <p>
+      Créez un compte gratuitement, et associez le à votre fiche : vous pourrez alors l'enrichir de photos et d'actualités.
+      <a href="/connexion/">
+       Démarrez maintenant !
+      </a>
+     </p>
+    </div>
+    <script>
+     $('.fiche-entrepreneur .infos .email .data').mailcrypt();
+    </script>
+   </div>
+  </div>
+  <div id="footer">
+   <div class="wrapper">
+    <div class="footer-baseline">
+     <p>
+      <a href="https://www.depaninformatique.xyz/" target="_blank">
+       Depaninformatique
+      </a>
+      -
+      <a href="http://www.annuaire-entrepreneur.com/">
+       Annuaire entrepreneur
+      </a>
+      -
+      <a href="http://www.vlasta.fr/">
+       Immobilier d'exception entre particuliers
+      </a>
+      -
+      <a href="/plan-du-site.htm">
+       Plan du site
+      </a>
+      -
+      <a href="http://admin.cenior.fr/">
+       Espace administration
+      </a>
+      - Copyright 2010-2012 - Cenior Marque déposée -
+      <a href="/mentions-legales.htm">
+       Mentions légales
+      </a>
+     </p>
+    </div>
+   </div>
+  </div>
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8807280-13']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+ </body>
+</html>
