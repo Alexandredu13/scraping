@@ -16,7 +16,9 @@ class FnacRepricer:
         # connection
         connection = FnapyConnection(self.credentials)
         manager = FnapyManager(connection)
-        print ('Connected to shop id : %s' % self.credentials['shop_id'])
+        token = manager.authenticate()
+        print(token)
+        print('Connected to shop id : %s' % self.credentials['shop_id'])
 
         # update offers
         offer_data1 = {'product_reference': '5030917077418',
@@ -27,30 +29,15 @@ class FnacRepricer:
                        'description': 'New product - 2-3 days shipping, from France'}
         manager.update_offers([offer_data1])
         a = manager.query_batch()
-        print ('Offer updated EANs %s' % offer_data1['product_reference'])
-        print ('Time : %s' % datetime.datetime.now())
-        print (manager.query_offers())
+        print('Offer updated EANs %s' % offer_data1['product_reference'])
+        print('Time : %s' % datetime.datetime.now())
+        print(manager.query_offers().xml)
 
-        price = manager.query_pricing(eans=self.eans)
-        print (price)
+        price = manager.query_pricing(eans=self.eans).xml
+        print(price)
 
 
 repricer = FnacRepricer()
 repricer.run()
 
 
-'''
-ean
-prix plancher
-strategie'''
-
-
-'''
-MVC : Modèle-Vue-Contrôleur 
-le modèle représente une information enregistrée
-la vue qui est, comme son nom l'indique, la visualisation de l'information
-le contrôleur prend en charge tous les événements de l'utilisateur
-
-MVT : Modèle-Vue-Template
-Il sera récupéré par la vue et envoyé au visiteur ; cependant, avant d'être envoyé, il sera analysé et exécuté par le framework
-'''
