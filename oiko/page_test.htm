@@ -1,0 +1,412 @@
+<div class="content">
+    <div class="hpanel">
+        <iframe src="https://sante-prevoyance.axelliance-solution.com/index.php?action=sso&amp;token=109f97db-d679-443f-a7e0-085a8ba344ac&amp;src=v2" frameborder="0"></iframe>
+    </div>
+
+
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Axelliance Solution | Tarifer</title>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/Content/images/favico.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/Content/images/favico.png" />
+    <!-- Primary vendor style -->
+    <link href="/bundles/Vendor/css?v=2M6rAv2Urtnd2M4wBqqB3CaWrrT1DeYecKPoGtLP8tI1" rel="stylesheet" />
+
+    <!-- Add local styles, mostly for plugins css file -->
+    <!-- Primary app style -->
+    <link href="/bundles/app/css?v=rPQ-eIInmE_AfIOooGacOMliDzkVAnVonqMDOu6zMmo1" rel="stylesheet" />
+    <script type="text/javascript">
+        var appInsights=window.appInsights||function(config)
+        {
+            function r(config){ t[config] = function(){ var i = arguments; t.queue.push(function(){ t[config].apply(t, i)})} }
+            var t = { config:config},u=document,e=window,o='script',s=u.createElement(o),i,f;for(s.src=config.url||'//az416426.vo.msecnd.net/scripts/a/ai.0.js',u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=['Event','Exception','Metric','PageView','Trace','Ajax'];i.length;)r('track'+i.pop());return r('setAuthenticatedUserContext'),r('clearAuthenticatedUserContext'),config.disableExceptionTracking||(i='onerror',r('_'+i),f=e[i],e[i]=function(config, r, u, e, o) { var s = f &amp;&amp; f(config, r, u, e, o); return s !== !0 &amp;&amp; t['_' + i](config, r, u, e, o),s}),t
+        }({
+            instrumentationKey:'6090c4d3-aeef-42a2-9591-50f21abb2a1e'
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+        setTimeout(function () {
+            window.location.reload(true);
+        }, 14460000); // 4 heures et 1 minutes
+    </script><script src="//az416426.vo.msecnd.net/scripts/a/ai.0.js"></script>
+
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<body class="fixed-navbar fixed-sidebar tarificateur">
+    <input type="hidden" id="url-stat-selector" value="/Statistique/CreerStatistique" />
+    <input type="hidden" id="notification-succes" />
+    <input type="hidden" id="notification-erreur" />
+    <input type="hidden" id="show-piece-reclamee-modal" value="" />
+    <input type="hidden" id="show-convention-modal" value="" />
+    <!-- Simple splash screen-->
+    <div class="splash" style="display: none;"> <div class="color-line"></div><div class="splash-title"><h1>Axelliance Solution</h1><p>Chargement en cours</p><div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
+    <!--[if lt IE 7]>
+    <p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Header -->
+    <div id="wrapper-header">
+        <div id="header">
+            <nav>
+    <!-- BTN menu et logo Mobile -->
+    <div class="btn-menu-mobile">
+        <div class="header-link hide-menu"><i class="fa fa-bars"></i></div>
+    </div>
+    <div class="small-logo">
+        <a href="/Tarifer"><img src="/Content/images/logo-menu-axelliance.png" alt="Axelliance Solution" /></a>
+    </div>
+    <!-- BTN menu et logo Mobile -->
+
+    <!-- Menu Mobile -->
+    <div class="mobile-menu">
+        <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+            <i class="fa fa-chevron-down"></i>
+        </button>
+        <div class="collapse mobile-navbar" id="mobile-collapse">
+            <ul class="nav navbar-nav">
+                    <li>
+                        <a class="" href="/Profil">Profil</a>
+                    </li>
+                <li>
+                    <a class="" href="javascript:document.getElementById('headerForm').submit()">Déconnexion</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- / Menu Mobile -->
+    <!-- Navigation haute droite -->
+    <div id="logo" class="light-version">
+        <a href="/Tarifer"><img src="/Content/images/logo-menu-axelliance.png" alt="Axelliance Solution" class="logo" /></a>
+    </div>
+<form action="/Account/LogOff" id="headerForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="S7cnT83dbHUbYE1lzcyA54BI2KJ3YRHQ7lLfYlcTGvMEXkdMBpLR9xK4Zc6nw1Npah5DfSBYcYP01AB3d44ivhKXtdHV0zEzc1qOzQJ4w_JU5_DRAjaLAdfGQQ1xqANIN9tKuNPar_lamTG1kyeCow2" />            <input type="hidden" id="routeObtenirNotificationsNonLues" value="/Notifications/ObtenirNotificationsNonLues" />
+            <input type="hidden" id="routeMarquerNotificationLues" value="/Notifications/MarquerNotificationLue" />
+            <div class="navbar-right">
+                <ul class="nav navbar-nav no-borders">
+                    <!-- Notifications -->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                                <i class="pe-7s-mail"></i>
+                                <span class="label label-success" id="nombreNotificationsArticles">1</span>
+                            </a>
+                            <ul class="dropdown-menu hdropdown notification animated flipInX" id="listeNotificationsArticles"><li><a class="elementListeNotification" data-identifiantnotification="29" href="https://extranet.axelliance-solution.com/Article/Index/71"><span class="label label-success">NEW</span>Gagnez du temps avec la signature électronique ! </a></li>
+                                <li class="summary"><a href="/Sinformer">Lire les articles d'Axelliance</a></li>
+                            </ul>
+                        </li>
+                    <!-- / Notifications -->
+                    <!-- Profil -->
+                    <li class="dropdown">
+                        <div class="profil-societe">
+                            <span class="font-extra-bold societe">RAPHAEL MERIDDA COURTAGE</span>
+                            <span class="font-extra-bold interlocuteur">Raphael MERIDDA</span>
+                            <div class="dropdown keep-open">
+                                <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                                    <small class="votre-profil">Votre profil <b class="caret"></b></small>
+                                </a>
+                                <ul class="dropdown-menu animated flipInX m-t-xs">
+                                        <li><a id="lien_consulter_profil" href="/Profil" class="substitution-police">Consulter</a></li>
+                                        <li class="divider"></li>
+                                                                            <li class="dropdown-header substitution-police">Se connecter en tant que</li>
+                                        <li>
+                                            <input type="hidden" id="urlWsListeAgence" value="/Account/listeAgences" />
+                                            <input type="hidden" id="urlWsListeContact" value="/Account/listeContacts" />
+                                            <input type="hidden" id="urlImpersonateLogin" value="/Account/ImpersonateLogin" />
+                                            <input type="hidden" id="placeholderAgence" value="Sélectionner agence" />
+                                            <input type="hidden" id="placeholderContact" value="Sélectionner collaborateur" />
+
+
+                                                <input type="hidden" data-selectlist="false" name="ImpersonatedAgence" id="ImpersonatedAgence" value="5673" />
+                                            <select name="ImpersonatedUserLogin" id="ImpersonatedUserLogin" style="width: 100%;" value="" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true"></select><span class="select2 select2-container select2-container--flat" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-ImpersonatedUserLogin-container"><span class="select2-selection__rendered" id="select2-ImpersonatedUserLogin-container"><span class="select2-selection__placeholder">Sélectionner collaborateur</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                        </li>
+                                        <li class="divider"></li>
+                                                                        <li><a href="javascript:document.getElementById('headerForm').submit()" class="substitution-police">Se déconnecter</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Profil -->
+                </ul>
+            </div>
+    <!-- / Navigation haute droite -->
+</form></nav>
+        </div>
+    </div>
+    <!-- Navigation -->
+
+
+<!-- menu rétracté -->
+<div id="btn-open-menu">
+    <div class="btn-open">
+        <div class="header-link hide-menu">
+            <i class="fa fa-arrow-right"></i>
+        </div>
+    </div>
+    <ul class="nav" id="side-menu-close">
+        <li id="menu_tarifer" class="nav-label-tarificateur ">
+            <a id="lien_tarifer" href="/Tarifer"></a>
+        </li>
+            <li id="menu_gerer" class="nav-label-portefeuille ">
+                <a id="lien_gerer" href="/Gerer"></a>
+            </li>
+        <li id="menu_sinformer" class="nav-label-news ">
+            <a id="lien_sinformer" href="/Sinformer"></a>
+        </li>
+            <li id="menu_contact" class="nav-label-contacts ">
+                <a id="lien_contact" href="/Profil?ongletActif=vos-contacts"></a>
+            </li>
+            </ul>
+</div>
+<!-- / menu rétracté -->
+<aside id="menu">
+
+    <div id="navigation">
+        <div class="profil-picture">
+                <div data-toggle="modal" data-target="#uploadPhotoAgenceModal">
+                    <label data-toggle="tooltip" data-html="true" data-placement="bottom" title="Cliquez ici pour&lt;br&gt; ajouter votre logo">
+                            <img id="photoAgence" class="m-b-sm m-t-sm img-portrait superviseur" src="/Content/images/profil-picture-defaut.png" alt="logo" />
+                    </label>
+                </div>
+        </div>
+        <div id="btn-close-menu">
+            <div class="header-link hide-menu"><i class="fa fa-arrow-left"></i></div>
+        </div>
+        <ul class="nav" id="side-menu">
+            <li id="menu_tarifer" class="nav-label-tarificateur ">
+                <a id="lien_tarifer" href="/Tarifer"><span>Tarificateur</span></a>
+            </li>
+                <li id="menu_gerer" class="nav-label-portefeuille ">
+                    <a id="lien_gerer" href="/Gerer"><span>Portefeuille</span></a>
+                </li>
+            <li id="menu_sinformer" class="nav-label-news ">
+                <a id="lien_sinformer" href="/Sinformer"><span>News</span></a>
+            </li>
+                <li id="menu_contact" class="nav-label-contacts ">
+                    <a id="lien_contact" href="/Profil?ongletActif=vos-contacts"><span>Contacts</span></a>
+                </li>
+                    </ul>
+    </div>
+</aside>
+
+    <!-- Main view  -->
+    <div id="wrapper" style="min-height: inherit;">
+
+<div class="content">
+    <div class="hpanel">
+        <iframe src="https://sante-prevoyance.axelliance-solution.com/index.php?action=sso&amp;token=d413f594-8d1e-4aea-ab7e-9fd598b5606b&amp;src=v2" frameborder="0"></iframe>
+    </div>
+</div>
+        <!-- Footer-->
+        <footer class="footer">
+    <span class="pull-right">
+        © Axelliance 2017 - Tous droits réservés
+    </span>
+    <a data-toggle="modal" data-target="#modal-mentions-legales" onclick="javascript:statLib.sendNoParam(&quot;Clic-Mentions-Legales&quot;);">Mentions légales</a>
+</footer>
+<!-- Modale Mentions légales -->
+<!-- / Modale Mentions légales -->
+    </div>
+
+
+    <!-- Section for main scripts render -->
+    <script src="/bundles/vendor/js?v=V1EI5MVtyO9YMHqWzZ-1_B-OOjqH7NLj7GxxQCYGggo1"></script>
+    <script src="/bundles/app/js?v=-3yOF2bssKD5TiG_uBeJ7EtTKxknD_g_4wC-39ij0Fw1"></script>
+    <script src="/bundles/jqueryval?v=XpDlaYLTkD3lZ7Fht8RWLKp_LnKQaKFKjLWOD_TdlA41"></script>
+    <!-- Handler for local scripts -->
+
+    <script src="/bundles/app/tarificateur?v=BcDLAyoIm_FAqqsyk0vHPLTwqYv0tW0lkFmjddTw-zs1"></script>
+
+<div id="uploadPhotoAgenceModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Envoyer la photo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+<form action="/Account/EnvoyerPhotoAgence" enctype="multipart/form-data" id="formEnvoyerPhotoAgence" method="post"><input name="__RequestVerificationToken" type="hidden" value="r5ZRA6-1qv1IR8NmN8kQDxiAn19K9v5WaKmEPU8__ja832os2suzheL59juzsxASzLsedhQio0kL3FQJorI_Kw7gKKdNwSBQ6gCkv9Fsx0I_UCaw2obHxU-n2TkHit1WC1icHr-wANxPKSl9zjxbyw2" />                    <div class="form-group">
+                        <input id="urlWsEnvoyerPhotoAgence" type="hidden" value="/Account/EnvoyerPhotoAgence" />
+                        <input type="file" name="file" class="form-control" id="composantPhotoSelector" accept=".jpeg,.jpg,.png" required="" />
+                    </div>
+</form>                <div class="progress full">
+                    <div id="progressbar" style="width: 0%" hidden="" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" class="progress-bar progress-bar-success">
+                        <span class=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button id="submitEnvoyerPhotoAgence" type="button" class="btn btn-primary btn-success" disabled="">Envoyer la photo</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade modal-mention-legal" id="modal-mentions-legales" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h4 class="modal-title">Mentions légales</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel-group" id="accordion-mentions" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion-mentions" href="#mentions-1" aria-expanded="true" aria-controls="mentions-1" class="">
+                                    INFORMATIONS GÉNÉRALES <span class="fa arrow"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="mentions-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
+                            <div class="panel-body">
+                                <p>
+                                    <strong>EDITEUR DU SITE</strong>
+                                    <br />Le site <a href="https://extranet-solution.axelliance.com">https://extranet-solution.axelliance.com</a> est édité par AXELLIANCE GROUPE - SAS, société de courtage en assurances.
+                                    <br />SIÈGE SOCIAL : Immeuble Les Topazes 92 cours Vitton 69456 LYON Cedex 06 - SAS au capital de 403 104 € - SIÈGE SOCIAL : Immeuble Les Topazes 92 cours Vitton 69456 LYON Cedex 06 - 481 849 362 RCS LYON
+                                </p>
+                                <p>
+                                    <strong>HEBERGEUR DU SITE</strong>
+                                    <br />Le présent site est hébergé sur l'offre cloud Microsoft Azure, par Microsoft France - 39, quai du Président Roosevelt, 92130 Issy-les-Moulineaux - Téléphone : 09 70 01 90 90
+                                    <br />Il est géographiquement localisé dans le centre d’hébergement de Microsoft en Europe de l’Ouest, situé aux Pays Bas.
+                                    <br />Politique de confidentialité de l'hébergeur : <a href="https://www.microsoft.com/fr-fr/TrustCenter/Privacy/default.aspx">https://www.microsoft.com/fr-fr/TrustCenter/Privacy/default.aspx</a>
+                                </p>
+                                <p>
+                                    <strong>TECHNOLOGIE DU SITE</strong>
+                                    <br />Le site <a href="https://extranet-solution.axelliance.com">https://extranet-solution.axelliance.com</a> est la propriété d'Axelliance Groupe. La reproduction, ou représentation, intégrale ou partielle, des pages, des données ou de tout autre élément constitutif du site, par quelque procédé ou support que ce soit, est interdite et constitue, sans autorisation de l'éditeur, une contrefaçon sanctionnée par les articles L 335-2 et suivants du Code de la propriété intellectuelle.
+                                </p>
+                                <p>
+                                    <strong>CREDITS PHOTOS</strong>
+                                    <br />Les photos utilisées par Axelliance ont fait l'objet d'accords bilatéraux avec les bénéficiaires de droits à l'image et/ou sont libres de droit.
+                                </p>
+                                <p>
+                                    <strong>AVERTISSEMENT</strong>
+                                    <br />Toutes les informations figurant sur ce site sont purement indicatives et ne sauraient engager la responsabilité de l'éditeur. Ces informations, qui ne prétendent pas à l'exhaustivité, ne sauraient valoir conseil, de quelque nature que ce soit, et ne saurait vous dispenser de l'avis d'un professionnel. Ces informations sont susceptibles de modifications à tout moment et sans préavis.
+                                </p>
+                                <p>
+                                    <strong>PROTECTION DES DONNÉES PERSONNELLES</strong>
+                                    <br />Les informations personnelles recueillies seront utilisées pour répondre aux différents services proposés par le site avec les finalités suivantes la souscription, la gestion (y compris commerciale) et l’exécution de vos contrats d’assurance. A ce titre, elles sont susceptibles d’être utilisées en tout ou partie par votre Intermédiaire d’Assurance, les Assureurs, Réassureurs, prestataires ou organismes professionnels habilités qui en ont besoin dans le cadre de nos activités.
+                                    <br />Conformément à la loi « Informatique et Liberté » n° 78-17 du 6 janvier 1978, vous bénéficiez d'un droit d'accès, de modification, de rectification et de suppression des données qui vous concernent, que vous pouvez exercer en vous adressant par mail à : <a href="mailto:gestion-cnil@axelliance.com">gestion-cnil@axelliance.com</a> ou par courrier à : Axelliance Solution - Gestion CNIL - Immeuble les Topazes - 92 cours Vitton - 69456 LYON Cedex 06.
+                                </p>
+                                <p>
+                                    <strong>LES COOKIES</strong>
+                                    <br />Un cookie est un petit fichier texte enregistré par le navigateur de votre ordinateur, tablette ou téléphone qui nous permet de garder la trace de votre visite. Un cookie est un élément qui ne permet pas d’identifier l’utilisateur mais sert à enregistrer des informations relatives à la navigation de celui-ci sur le site Internet.
+                                    <br />Nous utilisons les cookies pour optimiser les services de notre site.
+                                    <br />Vous pouvez désactiver ce cookie par l’intermédiaire des paramètres figurant au sein du logiciel de navigation.
+                                    <br />Cependant, nous attirons votre attention sur le fait que refuser les cookies peut rendre indisponibles tout ou partie du site.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion-mentions" href="#mentions-2" aria-expanded="false" aria-controls="mentions-2">
+                                    RÉCLAMATIONS <span class="fa arrow"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="mentions-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
+                            <div class="panel-body">
+                                <p>
+                                    <strong>Axelliance Solution est attentif à la satisfaction de ses clients. Nous mettons tous nos efforts pour répondre à vos attentes.</strong> Si toutefois vous souhaitez nous faire part de votre mécontentement vous pouvez nous contacter par mail à : <a href="mailto:reclamationclient@axelliance.com">reclamationclient@axelliance.com</a> ou par courrier à Axelliance Groupe, Immeuble les Topazes, 92 cours Vitton, 69456 Lyon Cedex 06. Un accusé de réception vous sera envoyé sous 48h et nous nous engageons à traiter votre demande dans les 30 jours sauf cas particuliers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion-mentions" href="#mentions-3" aria-expanded="false" aria-controls="mentions-3">
+                                    INFORMATIONS SUR LES SOCIETES DU GROUPE AXELLIANCE <span class="fa arrow"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="mentions-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
+                            <div class="panel-body">
+                                <p>
+                                    <strong>AXELLIANCE HOLDING</strong>
+                                    <br />SAS au capital de 9 079 484 € - SIEGE SOCIAL : Immeuble Les Topazes – 92 cours Vitton – 69456 LYON Cedex 06 - N°ORIAS 13 001 328 – <a href="http://www.orias.fr">www.orias.fr</a> - 525 003 646 RCS LYON - En cas de réclamation : Axelliance Groupe – Service Gestion des Réclamations 92 cours Vitton – 69456 Lyon Cedex 06 – <a href="mailto:reclamationclient@axelliance.com">reclamationclient@axelliance.com</a>
+                                </p>
+                                <p>
+                                    <strong>AXELLIANCE CREATIVE SOLUTIONS </strong>
+                                    exerçant sous la marque AXELLIANCE SOLUTION Société de courtage d’assurance - SAS au capital de 439 522.96 €  SIÈGE SOCIAL : Immeuble Les Topazes 92 cours Vitton 69456 LYON Cedex 06 - N° ORIAS 07 003 223 – www.orias.fr – 452 624 992 RCS LYON – En cas de réclamation : Axelliance Solution – Service Gestion des Réclamations 92 cours Vitton – 69456 Lyon Cedex 06 – <a href="mailto:reclamationclient@axelliance.com">reclamationclient@axelliance.com</a>
+                                </p>
+                                <p>
+                                    <strong>SQUADRA </strong>
+                                    exerçant sous la marque AXELLIANCE SOLUTION
+                                    Société de courtage d’assurance - SAS au capital de 53 293 €  SIÈGE SOCIAL : 30 rue Victor Hugo – 92532 Levallois Perret Cedex - N° ORIAS 08 044 501 – www.orias.fr – 499 776 730 RCS NANTERRE– En cas de réclamation : Axelliance Solution– Service Gestion des Réclamations - 30 rue Victor Hugo 92532 Levallois Perret Cedex – <a href="mailto:servicereclamations@squadra-assurances.com">servicereclamations@squadra-assurances.com</a>
+                                </p>
+                                <p>
+                                    <strong>VIVENS</strong>
+                                    exerçant sous la marque AXELLIANCE SOLUTION
+                                    Société de courtage d’assurance - SAS au capital de 252 050 € - SIÈGE SOCIAL : Immeuble Les Topazes 92 cours Vitton 69456 LYON Cedex 06 - - N° ORIAS 07 005 896 – www.orias.fr – 432 564 649 RCS LYON En cas de réclamation : Axelliance Solution– Service Gestion des Réclamations -92 cours Vitton – 69456 Lyon Cedex 06 <a href="mailto:gestionreclamation@vivens.fr">gestionreclamation@vivens.fr</a>
+                                </p>
+                                <p>
+                                    <strong>ORGANISME DE CONTROLE</strong>
+                                    <br />L'organisme chargée du contrôle  des sociétés de courtage d’assurance du GROUPE AXELLIANCE est l'ACPR– 61, rue Taitbout 75009 PARIS.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div><div id="showConventionSignature" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg ui-front" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-reclamation">
+                    <h5 class="modal-title modal-title-reclamation" id="modalLabel">Convention de partenariat</h5>
+                </div>
+                <div class="modal-body modal-body-reclamation">
+                    <div class="row">
+                        <div class="col-sm-12" style="text-align:center;">
+                            Mise à jour annuelle de notre Convention de Partenariat.
+                            <br />
+                            <br />
+                            Afin de vous faire gagner du temps,
+                            <br />
+                            nous avons mis en place un processus 100% en ligne.
+                            <br />
+                            <br />
+                            <span style="color:#95C11F;font-weight:bold;">La signature se fait en moins d'1 minute !</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                        <a href="/Signer" class="btn btn-success ">Je signe !</a>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Oups, je n'ai vraiment pas le temps</button>
+                </div>
+            </div>
+        </div>
+    </div><div id="showPieceReclameeNonFournie" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg ui-front" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-reclamation">
+                    <h5 class="modal-title modal-title-reclamation" id="modalLabel">On compte sur vous !</h5>
+                </div>
+                <div class="modal-body modal-body-reclamation">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            Afin de finaliser votre inscription, nous avons besoin de vos pièces justificatives :
+                            <ul>
+                                <li>Carte d'identité</li>
+                                <li>Extrait K-Bis de moins de 3 mois</li>
+                                <li>RIB</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                        <a href="/Profil?ongletActif=pieces-justificatives" class="btn btn-success ">Avec plaisir  !</a>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Oups, je n'ai vraiment pas le temps</button>
+                </div>
+            </div>
+        </div>
+    </div><div><div class="sweet-overlay" tabindex="-1"></div><div class="sweet-alert" tabindex="-1"><div class="icon error"><span class="x-mark"><span class="line left"></span><span class="line right"></span></span></div><div class="icon warning"> <span class="body"></span> <span class="dot"></span> </div> <div class="icon info"></div> <div class="icon success"> <span class="line tip"></span> <span class="line long"></span> <div class="placeholder"></div> <div class="fix"></div> </div> <div class="icon custom"></div> <h2>Title</h2><p>Text</p><button class="cancel" tabindex="2">Cancel</button><button class="confirm" tabindex="1">OK</button></div></div></body></html>
