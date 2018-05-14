@@ -10,7 +10,11 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+
+# selenium exceptions
+from selenium.common.exceptions import ElementNotVisibleException
 from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import WebDriverException
 
 
 class SeleniumOiko:
@@ -22,7 +26,7 @@ class SeleniumOiko:
         self.capa["pageLoadStrategy"] = "none"
         self.driver = webdriver.Chrome(self.path_to_webdriver, desired_capabilities=self.capa,
                                        chrome_options=self.options)
-        self.wait = WebDriverWait(self.driver, 30)
+        self.wait = WebDriverWait(self.driver, 10)
         self.url1 = "https://extranet.axelliance-solution.com/Account/Login"
         self.url2 = "https://extranet.axelliance-solution.com/Tarifer"
         self.url3 = "https://extranet.axelliance-solution.com/Tarifer/Gamme/5"
@@ -41,6 +45,12 @@ class SeleniumOiko:
         return self.wait.until(EC.presence_of_all_elements_located(
             (By.XPATH, element)
         ))
+
+    def scroll_to_element(self, element):
+        return self.driver.execute_script("arguments[0].scrollIntoView();", element)
+
+    def click_js(self, element):
+        return self.driver.execute_script("document.querySelector(arguments[0]).click();", element)
 
     def connect(self):
         self.driver.get(self.url1)
@@ -105,29 +115,42 @@ class SeleniumOiko:
                                 print('Garantie : %s' % o.text)
                                 buttonFour = spider.wait_xpath("//input[@value='Valider']")
                                 buttonFour.click()
-                                time.sleep(10)
-                                toggle_list = spider.wait_all_xpath(
-                                    "//span[@class='glyphicon glyphicon-triangle-bottom open-close']")
-                                for p in toggle_list:
-                                    p.click()
-                                incapaciteButton = spider.wait_xpath("//input[contains(@name, 'incapacite-')]")
-                                incapaciteButton.click()
-                                franchiseButton = spider.wait_xpath("//select[@id='franchise-7-1']/option[@value=18]")
-                                franchiseButton.click()
-                                tranquiliteButton = spider.wait_xpath("//input[contains(@name, 'tranquillite-')]")
-                                tranquiliteButton.click()
-                                invaliditeButton = spider.wait_xpath("//select[@id='invalidite-7-1']/option[@value=3]")
-                                invaliditeButton.click()
-                                accidentButton = spider.wait_xpath("//input[contains(@name, 'deces_acc-']")
-                                accidentButton.click()
-                                renteduButton = spider.wait_xpath(
-                                    "//select[@id='rente_education-7-1']/option[@value=11]")
-                                renteduButton.click()
-                                for p in [5, 10, 15, 20]:
-                                    tcvButton = spider.wait_xpath(
-                                        "//select[@id='taux_comm_courtier-7-1']/option[@value=%s]" % p
-                                    )
-                                    time.sleep(2)
+                                time.sleep(2)
+                                for p in range(0, 3):
+                                    self.driver.execute_script(
+                                        "document.querySelectorAll\
+                                        ('span.glyphicon.glyphicon-triangle-bottom.open-close')[%s].click():" % p)
+                                    time.sleep(1)
+                                for q in range(0, 10):
+                                    try:
+                                        spider.scroll_to_element("input#incapacite-%s-1" % q)
+                                        spider.click_js("input#incapacite-%s-1" % q)
+                                        spider.scroll_to_element("input#tranquilite-%s-1" % q)
+                                        spider.click_js("input#tranquilite-%s-1" % q)
+                                        spider.scroll_to_element("input#deces_acc-%s-1" % q)
+                                        spider.click_js("input#deces_acc-%s-1" % q)
+                                        franchiseButton = spider.wait_xpath(
+                                            "//select[@id='franchise-%s-1']/option[@value=18]" % q)
+                                        franchiseButton.click()
+                                        invaliditeButton = spider.wait_xpath(
+                                            "//select[@id='invalidite-%s-1']/option[@value=3]" % q)
+                                        invaliditeButton.click()
+                                        renteduButton = spider.wait_xpath(
+                                            "//select[@id='rente_education-%s-1']/option[@value=11]" % q)
+                                        renteduButton.click()
+                                    except WebDriverException:
+                                        pass
+
+                                for r in [5, 10, 15, 20]:
+                                    for q in range(0,10):
+                                        try:
+                                            tcvButton = spider.wait_xpath(
+                                                "//select[@id='taux_comm_courtier-%s-1']/option[@value=%s]" % (q, r)
+                                            )
+                                            tcvButton.click()
+                                        except WebDriverException:
+                                            pass
+
 
 spider = SeleniumOiko()
 spider.extract()

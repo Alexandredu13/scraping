@@ -61,19 +61,19 @@ with open('linkedin_items.csv', 'w') as csvfile:
 
     # loop company
     for i in range(0,len(constants.c)):
-        print constants.c[i]
+        print(constants.c[i])
 
     # creer tableau
     csv_row = []
 
     # prendre infos
     profils = driver.find_elements_by_css_selector("ul.search-results__list.list-style-none li")
-    print profils[0]
-    print profils[1]
+    print(profils[0])
+    print(profils[1])
     for profil in profils:
         url_profil = driver.find_element_by_css_selector("a.search-result__result-link.ember-view").get_attribute('href')
-        print url_profil[0]
-        print url_profil[1]
+        print(url_profil[0])
+        print(url_profil[1])
         csv_row.append(url_profil)
 
         # go url
