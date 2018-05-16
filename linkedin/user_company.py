@@ -18,12 +18,9 @@ from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import UnexpectedAlertPresentException
 from selenium.common.exceptions import WebDriverException
 
-# constant
-from constant_fixed import constants
-
 # identifiants
-email_address = "email_address"
-password = "password"
+email_address = "jfive989@gmail.com"
+password = "'5f7d19a2"
 sleep_time = 2
 
 # configurer webdriver
@@ -58,10 +55,6 @@ wait.until(EC.element_to_be_clickable(
 with open('linkedin_items.csv', 'w') as csvfile:
     cwriter = csv.writer(csvfile, delimiter=' ',
                             quotechar='|', quoting=csv.QUOTE_MINIMAL)
-
-    # loop company
-    for i in range(0,len(constants.c)):
-        print(constants.c[i])
 
     # creer tableau
     csv_row = []

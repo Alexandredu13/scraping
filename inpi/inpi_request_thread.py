@@ -15,12 +15,10 @@ import urllib
 import requests
 import csv
 from threading import Thread
-import webbrowser, os
-import cookielib
+import os
 import time
 from bs4 import BeautifulSoup
 from scrapy import Selector
-import Queue
 
 
 class inpi_request(threading.Thread):
@@ -32,13 +30,13 @@ class inpi_request(threading.Thread):
         self.s = requests.Session()
         self.count = 0
         self.error_table = []
-        self.year = "2016"
-        self.month = "12"
-        self.total_days = 31
+        self.year = "2018"
+        self.month = "04"
+        self.total_days = 30
         self.starting_day = 1
         self.local_directory = self.month + self.year + "/"
-        self.url_directory = "/Users/sashabouloudnine/PycharmProjects/scraping/sandbox/inpi/main_page_requests/" + \
-        self.local_directory
+        self.url_directory = "/Users/sashabouloudnine/PycharmProjects/lobstr/scraping/inpi/main_page_requests/" + \
+                             self.local_directory
 
     def increment(self):
         self.count = self.count + 1
@@ -47,14 +45,14 @@ class inpi_request(threading.Thread):
         for date in inpi_request.dates(self):
             while True:
                 try:
-                    print 'spider-' + str(self.threadID) + ' : entering'
+                    print('spider-' + str(self.threadID) + ' : entering')
                     inpi_request.entry(self)
-                    print 'spider-' + str(self.threadID) + ' : in'
+                    print('spider-' + str(self.threadID) + ' : in')
                     inpi_request.postman(self, self.threadID, date)
-                    print 'spider-' + str(self.threadID) + ' : done'
+                    print('spider-' + str(self.threadID) + ' : done')
                     time.sleep(0.5)
                 except(exceptions.ChunkedEncodingError, exceptions.ConnectionError):
-                    print 'error'
+                    print('error')
                     continue
                 break
 
@@ -112,7 +110,7 @@ class inpi_request(threading.Thread):
                              features='html.parser')
         html_response = soup.prettify()
 
-        with open(self.url_directory + date, 'w') as \
+        with open(self.url_directory + date + '.txt', 'wb') as \
                 my_file:
             my_file.write(html_response.encode('utf-8'))
 
@@ -126,7 +124,7 @@ class inpi_request(threading.Thread):
             company_number = self.is_int(company_number)
         except:
             pass
-        print str(date) + " : spider-" + str(threadID)
+        print(str(date) + " : spider-" + str(threadID))
 
         if company_number > 500:
             self.split_postman(date, self.threadID, 0, 10)
@@ -169,7 +167,7 @@ class inpi_request(threading.Thread):
         soup = BeautifulSoup(text_response, 'html.parser')
         html_response = soup.prettify()
 
-        with open(self.url_directory + date, 'w') as \
+        with open(self.url_directory + date, 'wb') as \
                 my_file:
             my_file.write(html_response)
 
@@ -210,7 +208,7 @@ class inpi_request(threading.Thread):
         soup = BeautifulSoup(text_response, 'html.parser')
         html_response = soup.prettify()
         with open(self.url_directory + date + "_" +
-                  str(page_number), 'w') as my_file:
+                  str(page_number), 'wb') as my_file:
             my_file.write(html_response.encode('utf-8'))
 
     # enter on website
@@ -268,5 +266,5 @@ for tName in threadList:
 # Wait for all threads to complete
 for t in threads:
     t.join()
-print "Exiting Main Thread"
+print("Exiting Main Thread")
 os.system('say "sasha tu es un champion"')

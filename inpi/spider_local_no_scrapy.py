@@ -11,10 +11,10 @@ import csv
 class spider:
 
     def __init__(self):
-        self.directory_name = "122016"
+        self.directory_name = "042018"
         self.count = 0
-        self.path = '/Users/sashabouloudnine/PycharmProjects/scraping/sandbox/inpi/main_page_requests/' + self.directory_name
-
+        self.path = '/Users/sashabouloudnine/PycharmProjects/lobstr/scraping/inpi/main_page_requests/' + \
+                    self.directory_name
 
     def increment(self):
         self.count = self.count + 1
@@ -50,14 +50,12 @@ class spider:
 
                 with open(self.path+"/"+filename, "r") as html_page:
                     soup = BeautifulSoup(html_page,
-                                         features='html.parser',
-                                         from_encoding='utf-8'
-                                         )
+                                         features='html.parser')
                     sel = Selector(text=soup.prettify())
 
                     try:
                         marque = sel.xpath('//div[@class="blanc"]/div/p[contains(strong, "Marque")]/text()').extract()[1]
-                        marque = marque.encode('utf-8').replace('\xc2\xa0','').\
+                        marque = marque.replace('\xc2\xa0','').\
                             replace('\n             :','').replace('\n            ','')
                     except IndexError:
                         marque = ''
@@ -66,7 +64,7 @@ class spider:
                     try:
                         classification = sel.xpath(
                         '//div[@class="blanc"]/div/p[contains(strong, "Classification de Nice")]/text()').extract()[1]
-                        classification = classification.encode('utf-8').replace('\xc2\xa0','').\
+                        classification = classification.replace('\xc2\xa0','').\
                             replace('\n             :','').replace('\n            ','')
                     except(IndexError):
                         classification = ''
@@ -74,7 +72,7 @@ class spider:
 
                     try:
                         numero = sel.xpath('//div[@class="blanc"]/div/p[contains(strong, "Num")]/text()').extract()[1]
-                        numero = numero.encode('utf-8').replace('\xc2\xa0','').\
+                        numero = numero.replace('\xc2\xa0','').\
                             replace('\n             :','').replace('\n            ','')
                     except(IndexError):
                         numero = ''
@@ -82,7 +80,7 @@ class spider:
 
                     try:
                         date = sel.xpath('//div[@class="blanc"]/div/p[contains(strong, "Date de")]/text()').extract()[1]
-                        date = date.encode('utf-8').replace('\xc2\xa0','').\
+                        date = date.replace('\xc2\xa0','').\
                             replace('\n             :','').replace('\n            ','')
                     except(IndexError):
                         date = ''
@@ -90,7 +88,7 @@ class spider:
 
                     try:
                         deposant = sel.xpath('//div[@class="blanc"]/div/p[contains(strong, "posant")]/text()').extract()[1]
-                        deposant = deposant.encode('utf-8').replace('\xc2\xa0','').\
+                        deposant = deposant.replace('\xc2\xa0','').\
                             replace('\n             :','').replace('\n            ','')
                         deposant = deposant.split(',')
                         longueur_deposant = len(deposant)
@@ -152,8 +150,8 @@ class spider:
 
                     try:
                         mandataire = sel.xpath('//div[@class="blanc"]/div/p[contains(strong, "Mandataire")]/text()').extract()[1]
-                        mandataire = mandataire.encode('utf-8').replace('\xc2\xa0','').\
-                            replace('\n             :','').replace('\n            ','')
+                        mandataire = mandataire.replace('\xc2\xa0','').\
+                            replace('\n             :', '').replace('\n            ', '')
                         mandataire = mandataire.split(',')
                         longueur_mandataire = len(mandataire)
                         if longueur_mandataire == 5:
@@ -212,7 +210,6 @@ class spider:
                         longueur_mandataire = ''
                         pass
 
-
                     logo_name = ('logo_%s' % self.count).encode('utf-8')
 
                     writer.writerow({'marque': marque,
@@ -237,6 +234,7 @@ class spider:
 
                     print("-- SUCCESS %s --" % (self.count))
                     spider.increment()
+
 
 spider = spider()
 spider.extraction()

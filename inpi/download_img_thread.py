@@ -1,13 +1,9 @@
 from bs4 import BeautifulSoup
 import os
-import re
 from scrapy import Selector
-from scrapy.selector import HtmlXPathSelector
-import re
-import codecs
-import urllib
+import urllib.request
 import threading
-import csv
+
 
 class spider(threading.Thread):
 
@@ -16,14 +12,14 @@ class spider(threading.Thread):
         self.threadID = threadID
         self.name = name
         self.count = 0
-        self.directory_name = "122016"
-        self.limit = 0
+        self.directory_name = "042018"
+        self.limit = 2300
 
     def increment(self):
         self.count = self.count + 1
 
     def run(self):
-        path = '/Users/sashabouloudnine/PycharmProjects/scraping/sandbox/inpi/main_page_requests/' + self.directory_name
+        path = '/Users/sashabouloudnine/PycharmProjects/lobstr/scraping/inpi/main_page_requests/' + self.directory_name
 
         for filename in os.listdir(path):
 
@@ -31,11 +27,8 @@ class spider(threading.Thread):
 
                 with open(path+"/"+filename, "r") as html_page:
                     soup = BeautifulSoup(html_page,
-                                         features='html.parser',
-                                         from_encoding='utf-8'
-                                         )
+                                         features='html.parser')
                     sel = Selector(text=soup.prettify())
-
 
                     if self.count % 3 == self.threadID:
 
@@ -44,13 +37,13 @@ class spider(threading.Thread):
                         image_urls = sel.xpath('//img[@class="null"]/@src').extract_first()
                         if image_urls is not None:
                             image_urls = 'https://bases-marques.inpi.fr/' + image_urls
-                            urllib.urlretrieve(image_urls,
-                                               "/Users/sashabouloudnine/PycharmProjects/scraping/sandbox/inpi/logos/" + self.directory_name + "/%s.png" % (
-                                               logo_name))
+                            urllib.request.urlretrieve(image_urls,
+                                                       "/Users/sashabouloudnine/PycharmProjects/lobstr/scraping/inpi/logos/" + self.directory_name+ "/%s.png" % logo_name)
+
                         else:
                             pass
 
-                        print '-- SUCCESS : %s --' % logo_name
+                        print('-- SUCCESS : %s --' % logo_name)
                         spider.increment(self)
 
                     else:
@@ -59,7 +52,7 @@ class spider(threading.Thread):
 
             else:
                 spider.increment(self)
-                print self.count
+                print(self.count)
                 pass
 
 threadList = [
@@ -80,5 +73,5 @@ for tName in threadList:
 
 for t in threads:
     t.join()
-print "Exiting Main Thread"
+print("Exiting Main Thread")
 os.system('say "travail terminai"')
