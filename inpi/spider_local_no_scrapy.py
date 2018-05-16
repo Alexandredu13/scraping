@@ -8,6 +8,7 @@ import codecs
 import urllib
 import csv
 
+
 class spider:
 
     def __init__(self):
