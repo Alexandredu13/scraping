@@ -17,3 +17,22 @@ wait = WebDriverWait(driver, 30)
 
 def scroll_to_element(element):
     return driver.execute_script("arguments[0].scrollIntoView();", element)
+
+def wait_css(self, element):
+    return self.wait.until(EC.element_to_be_clickable(
+        (By.CSS_SELECTOR, element)
+    ))
+
+def wait_xpath(self, element):
+    return self.wait.until(EC.element_to_be_clickable(
+        (By.XPATH, element)
+    ))
+
+def wait_all_xpath(self, element):
+    return self.wait.until(EC.presence_of_all_elements_located(
+        (By.XPATH, element)
+    ))
+
+def click_js(self, element):
+    return self.driver.execute_script("document.querySelector(arguments[0]).click();", element)
+
