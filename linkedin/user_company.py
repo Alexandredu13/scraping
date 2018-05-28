@@ -19,8 +19,8 @@ from selenium.common.exceptions import UnexpectedAlertPresentException
 from selenium.common.exceptions import WebDriverException
 
 # identifiants
-email_address = "jfive989@gmail.com"
-password = "'5f7d19a2"
+email_address = ""
+password = ""
 sleep_time = 2
 
 # configurer webdriver
