@@ -20,14 +20,14 @@ class ContactManageo():
 
     def __init__(self):
         self.fieldnames = ['Nom', 'URL', 'Siren', 'Code postal', 'Ville']
-        self.client = 'gklein'
+        self.client = ''
         self.date = str(datetime.date.today()).replace('-','')
         self.site = 'manageo'
         self.url = 'https://www.manageo.fr/'
         self.cible = 'https://www.manageo.fr/annuaire/95-val-d-oise-syndic-de-copropriete-_dem95-582-1.html'
-        self.user_email = 'g.klein.manageo@maildrop.cc'
-        self.user_password = 'gklein75'
-        self.receipt_email = 'g.klein@lr-services.com'
+        self.user_email = ''
+        self.user_password = ''
+        self.receipt_email = ''
         self.options = Options()
         self.options.add_argument("--kiosk")
         self.capa = DesiredCapabilities.CHROME
@@ -35,16 +35,7 @@ class ContactManageo():
         self.driver = webdriver.Chrome('/Users/sashabouloudnine/Desktop/chromedriver',
                                        desired_capabilities=self.capa, options=self.options)
         self.wait = WebDriverWait(self.driver, 20)
-        self.message = u"Bonjour Madame, Monsieur \n\nJe suis Mr KLEIN responsable commercial de la soci\u00e9t\u00e9 " \
-                       u"LR SERVICES. Notre entreprise est sp\u00e9cialis\u00e9e dans le secteur de l'entretien des" \
-                       u" b\u00e2timents, des parties communes et des entr\u00e9es et sorties de containers, depuis " \
-                       u"quelques ann\u00e9es. \n Nous avons acquis l'exp\u00e9rience n\u00e9cessaire dans ce domaine " \
-                       u"pour vous apporter des r\u00e9ponses claires, pr\u00e9cises et techniques.\n\nNous " \
-                       u"restons donc a votre disposition pour un \u00e9ventuelle rendez-vous physique ou " \
-                       u"t\u00e9l\u00e9phonique afin d'analyser vos besoins et vos attentes, et vous transmettre dans " \
-                       u"les 24h un devis correspondant.\n\nNous souhaitons vivement que la qualit\u00e9 de nos " \
-                       u"services retienne votre attention.\n\nVeuillez agr\u00e9er, Madame, Monsieur, " \
-                       u"l'expression de nos salutations distingu\u00e9es."
+        self.message = u"Bonjour Madame, Monsieur"
         self.count = 0
 
     def scroll_to_element(self, element):
