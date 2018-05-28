@@ -61,8 +61,8 @@ class SeleniumOiko:
 
         identifiant = spider.wait_css("input#Login")
         password = spider.wait_css("input#Password")
-        identifiant.send_keys("09051123")
-        password.send_keys("cUMZg6AYZ478tt28")
+        identifiant.send_keys("")
+        password.send_keys("")
         button_one = spider.wait_css("button.btn.btn-login.submit-button")
         button_one.click()
         print('Connecté à : %s' % url)
