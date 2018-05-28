@@ -6,14 +6,14 @@ import datetime
 class FnacRepricer:
 
     def __init__(self, ean, fnac_id, floor_price):
-        self.credentials = {'partner_id': '4AAE9C13-EE1C-823F-B8A5-5A985A40771E',
-                            'shop_id': 'E0EEEF1A-26E6-2AF5-5289-988258FE9948',
-                            'key': '36829267-B88B-B2DE-9BDC-C0EA6872CA48',
+        self.credentials = {'partner_id': ,
+                            'shop_id': ,
+                            'key': ,
                             'sandbox': False}
         self.sandbox_credentials = {
-            'partner_id': 'BDF301E4-9E9F-E153-6A51-0C37D6A32C9F',
-            'shop_id': '345FF055-4B8B-0C07-38C8-36CC3B3D16B9',
-            'key': 'F4FB8AC7-F7B5-8BDC-F5FC-5594BBFBE5F8',
+            'partner_id': ,
+            'shop_id': ,
+            'key': ,
             'sandbox': True
         }
         self.ean = [ean]
